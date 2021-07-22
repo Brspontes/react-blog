@@ -32,6 +32,20 @@ export default function Home() {
       <main className={styles.container}>
         <div className={styles.containerHeader}>
           <Header />
+          <div className={styles.content}>
+            <h1>Como utlizar Hooks</h1>
+            <p>Pensando em sincronização ao invés de ciclo de vida</p>
+            <div>
+              <div className={styles.calendar}>
+                <img src="/images/calendar.png" alt="Date Publication" />
+                <p>15 mar 2021</p>
+              </div>
+              <div className={styles.author}>
+                <img src="/images/user.png" alt="Author" />
+                <p>Brian</p>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
     </>

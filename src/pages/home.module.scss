@@ -8,3 +8,54 @@
 .containerHeader {
   margin-top: 5rem;
 }
+
+.content {
+  display: block;
+  margin-top: 5rem;
+
+  h1 {
+    color: #F8F8F8;
+    font-weight: 700;
+  }
+
+  > p {
+    font-size: 1.125rem;
+    color: #D7D7D7;
+    margin-top: 0.5rem;
+  }
+
+  > div {
+    max-width: 200px;
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between;
+  }
+}
+
+.calendar {
+  display: flex;
+
+  img {
+    filter: invert(100%);
+  }
+
+  p {
+    padding-left: 0.5rem;
+    font-size: 0.875rem;
+    color: #D7D7D7;
+  }
+}
+
+.author {
+  display: flex;
+
+  img {
+    filter: invert(100%);
+  }
+
+  p {
+    padding-left: 0.5rem;
+    font-size: 0.875rem;
+    color: #D7D7D7;
+  }
+}
