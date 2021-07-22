@@ -46,6 +46,9 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className={styles.carregarMais}>
+            <a href="#">Carregar mais posts</a>
+          </div>
         </div>
       </main>
     </>

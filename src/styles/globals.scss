@@ -25,4 +25,9 @@
 body {
   background: var(--backgroud);
   font-family: Inter, sans-serif;
+
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
 }
