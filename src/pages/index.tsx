@@ -68,27 +68,29 @@ export default function Home(homeProps: HomeProps) {
           {
             posts.map(p => (
               <Link href={`/post/${p.uid}`} key={p.uid}>
-                <div className={styles.content}>
-                  <h1>{ p.data.title }</h1>
-                  <p>{ p.data.subtitle }</p>
-                  <div>
-                    <div className={styles.calendar}>
-                      <img src="/images/calendar.png" alt="Date Publication" />
-                      <p>{
-                      format(
-                        new Date(p.first_publication_date),
-                        "d 'de' MMM yyyy",
-                        {
-                          locale: ptBR,
-                        }
-                      )}</p>
-                    </div>
-                    <div className={styles.author}>
-                      <img src="/images/user.png" alt="Author" />
-                      <p>{ p.data.author }</p>
+                <a href="#">
+                  <div className={styles.content}>
+                    <h1>{ p.data.title }</h1>
+                    <p>{ p.data.subtitle }</p>
+                    <div>
+                      <div className={styles.calendar}>
+                        <img src="/images/calendar.png" alt="Date Publication" />
+                        <p>{
+                        format(
+                          new Date(p.first_publication_date),
+                          "d 'de' MMM yyyy",
+                          {
+                            locale: ptBR,
+                          }
+                        )}</p>
+                      </div>
+                      <div className={styles.author}>
+                        <img src="/images/user.png" alt="Author" />
+                        <p>{ p.data.author }</p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </a>
               </Link>
             ))
           }

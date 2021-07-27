@@ -16,6 +16,13 @@
   h1 {
     color: #F8F8F8;
     font-weight: 700;
+
+    transition: filter 0.5s;
+
+    &:hover {
+      color: #FF57B2;
+      filter: brightness(0.8);
+    }
   }
 
   > p {
