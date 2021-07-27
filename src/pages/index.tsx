@@ -3,6 +3,7 @@ import { getPrismicClient } from '../services/prismic';
 import Prismic from '@prismicio/client'
 import Head from 'next/head'
 import commonStyles from '../styles/common.module.scss';
+import Link from 'next/link';
 import styles from './home.module.scss';
 import Header from '../components/Header';
 import { format } from 'date-fns';
@@ -66,27 +67,29 @@ export default function Home(homeProps: HomeProps) {
           <Header />
           {
             posts.map(p => (
-              <div className={styles.content}>
-                <h1>{ p.data.title }</h1>
-                <p>{ p.data.subtitle }</p>
-                <div>
-                  <div className={styles.calendar}>
-                    <img src="/images/calendar.png" alt="Date Publication" />
-                    <p>{
-                    format(
-                      new Date(p.first_publication_date),
-                      "d 'de' MMM yyyy",
-                      {
-                        locale: ptBR,
-                      }
-                    )}</p>
-                  </div>
-                  <div className={styles.author}>
-                    <img src="/images/user.png" alt="Author" />
-                    <p>{ p.data.author }</p>
+              <Link href={`/post/${p.uid}`} key={p.uid}>
+                <div className={styles.content}>
+                  <h1>{ p.data.title }</h1>
+                  <p>{ p.data.subtitle }</p>
+                  <div>
+                    <div className={styles.calendar}>
+                      <img src="/images/calendar.png" alt="Date Publication" />
+                      <p>{
+                      format(
+                        new Date(p.first_publication_date),
+                        "d 'de' MMM yyyy",
+                        {
+                          locale: ptBR,
+                        }
+                      )}</p>
+                    </div>
+                    <div className={styles.author}>
+                      <img src="/images/user.png" alt="Author" />
+                      <p>{ p.data.author }</p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))
           }
           {nextPage &&
